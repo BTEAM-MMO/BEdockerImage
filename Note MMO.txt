@@ -1,0 +1,30 @@
+các trường cần thêm vào bảng:
+1. Users
+	Số điện thoại (có thể để trống)
+	key 2FA (có thể để trống)
+	token để mua bằng API 
+	số gian hàng đang bán (dành cho seller)
+2. wallets
+	status ( bị khóa hay vẫn hoạt động)
+3. wallets_transactions
+	status ( thành công hay vẫn đang xử lý hay bị hủy)
+4. conversations 
+	image ( muốn gửi ảnh thì sao)
+	cần thay đổi không dùng userid và sellerid vì có thể là admin nhắn với người dùng hoặc đơn giản là cho 2 người dùng nhắn với nhau. thay đổi thành: receive_id và send id
+	nghiên cứu xem conversationId có cần thiết không vì có ID gửi và nhận là đã truy xuất được
+5. orders 
+	note
+6. orders_details
+	seller_id
+các bảng cần thêm:
+1. lịch sử đăng nhập
+2. lịch sử giao dịch
+3. thông tin gian hàng
+4. thông tin sản phẩm 
+5. thông tin dịch vụ 
+6. orders_service
+7. thông tin bài đăng 
+8. thông tin thông báo hệ thống
+9. thông tin mã giảm giá
+10. thông tin IP truy cập (dành cho admin)
+
