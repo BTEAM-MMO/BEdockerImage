@@ -5,8 +5,10 @@ https://drive.google.com/drive/folders/1DNh38Jbe27YTe0VKiSuO3Xv7SlX5AcLp?usp=sha
 ##2. Load images vào Docker
 Chạy lệnh:
 
-docker load -i mysql8.tar
-docker load -i mmo_app.tar
-
-##3. chạy 
+docker load -i mmo_bundle.tar
 docker-compose up -d
+
+
+##3. Truy cập
+http://localhost:8080/swagger-ui/index.html
+
