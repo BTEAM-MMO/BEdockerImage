@@ -12,3 +12,12 @@ docker-compose up -d
 ##3. Truy cập
 http://localhost:8080/swagger-ui/index.html
 
+
+##4. Truy cập đata
+
+mmo
+username: phamlong
+password: long0403@
+
+
+
