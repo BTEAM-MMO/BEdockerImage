@@ -3,6 +3,7 @@
 https://drive.google.com/drive/folders/1DNh38Jbe27YTe0VKiSuO3Xv7SlX5AcLp?usp=sharing
 
 ##2. Load images vào Docker
+vò thư mục đã tải image
 Chạy lệnh:
 
 docker load -i mmo_bundle.tar
@@ -18,6 +19,7 @@ http://localhost:8080/swagger-ui/index.html
 mmo
 username: phamlong
 password: long0403@
+
 
 
 
