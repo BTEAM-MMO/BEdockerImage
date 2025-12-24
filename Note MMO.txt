@@ -6,12 +6,15 @@ https://drive.google.com/drive/folders/1DNh38Jbe27YTe0VKiSuO3Xv7SlX5AcLp?usp=sha
 vò thư mục đã tải image
 Chạy lệnh:
 
-docker load -i mmo_bundle.tar
-docker-compose up -d
+docker compose -f docker-compose.images.yml down
+docker volume rm mmo_remake_mysql_data
+docker compose -f docker-compose.images.yml up -d
+
+docker exec -it mmo_db sh -c "mysql -uroot -padmin -e \"CREATE USER IF NOT EXISTS 'phamlong'@'%' IDENTIFIED BY 'long0403@'; ALTER USER 'phamlong'@'%' IDENTIFIED BY 'long0403@'; GRANT ALL PRIVILEGES ON mmo_db.* TO 'phamlong'@'%'; FLUSH PRIVILEGES;\""
 
 
 ##3. Truy cập
-http://localhost:8080/swagger-ui/index.html
+http://localhost:8081/swagger-ui/index.html
 
 
 ##4. Truy cập đata
@@ -19,6 +22,7 @@ http://localhost:8080/swagger-ui/index.html
 mmo
 username: phamlong
 password: long0403@
+
 
 
 
