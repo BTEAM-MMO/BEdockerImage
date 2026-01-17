@@ -15,7 +15,7 @@ docker exec -it mmo_db sh -c "mysql -uroot -padmin -e \"CREATE USER IF NOT EXIST
 
 
 ##3. Truy cập
-http://localhost:8081/swagger-ui/index.html
+http://localhost:8080/swagger-ui/index.html
 
 
 ##4. Truy cập đata
@@ -23,6 +23,7 @@ http://localhost:8081/swagger-ui/index.html
 mmo
 username: phamlong
 password: long0403@
+
 
 
 
