@@ -3,9 +3,10 @@
 https://drive.google.com/drive/folders/1DNh38Jbe27YTe0VKiSuO3Xv7SlX5AcLp?usp=sharing
 
 ##2. Load images vào Docker
-vò thư mục đã tải image
+vào thư mục đã tải image
 Chạy lệnh:
 
+docker load -i images_bundle.tar
 docker compose -f docker-compose.images.yml down
 docker volume rm mmo_remake_mysql_data
 docker compose -f docker-compose.images.yml up -d
@@ -22,6 +23,7 @@ http://localhost:8081/swagger-ui/index.html
 mmo
 username: phamlong
 password: long0403@
+
 
 
 
