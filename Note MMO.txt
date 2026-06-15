@@ -1,18 +1,15 @@
 ##1. Tải image từ driver :
 
-https://drive.google.com/drive/folders/1DNh38Jbe27YTe0VKiSuO3Xv7SlX5AcLp?usp=sharing
+https://drive.google.com/drive/folders/1ERvcCtbjcz1yfb4BITojqx-K91L3Bnvl?usp=sharing
 
 ##2. Load images vào Docker
 vào thư mục đã tải image
 Chạy lệnh:
 
-docker load -i images_bundle.tar
-docker compose -f docker-compose.images.yml down
-docker volume rm mmo_remake_mysql_data
-docker compose -f docker-compose.images.yml up -d
-
-docker exec -it mmo_db sh -c "mysql -uroot -padmin -e \"CREATE USER IF NOT EXISTS 'phamlong'@'%' IDENTIFIED BY 'long0403@'; ALTER USER 'phamlong'@'%' IDENTIFIED BY 'long0403@'; GRANT ALL PRIVILEGES ON mmo_db.* TO 'phamlong'@'%'; FLUSH PRIVILEGES;\""
-
+mkdir uploads
+docker load -i mmo_db.tar
+docker load -i mmo_app.tar 
+docker-compose -f docker-compose.images.yml up -d 
 
 ##3. Truy cập
 http://localhost:8080/swagger-ui/index.html
